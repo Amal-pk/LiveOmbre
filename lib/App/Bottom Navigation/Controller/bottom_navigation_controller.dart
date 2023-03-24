@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:liveombre/App/Home/View/homepage.dart';
 
-class BottomNavigationController extends ChangeNotifier{
+class BottomNavigationController extends ChangeNotifier {
   List<dynamic> screens = [
-    // const Screens(),
-    // const Screens(),
+    const HomePage(),
+    const HomePage(),
     // const Screens(),
     // const Settings(),
   ];
