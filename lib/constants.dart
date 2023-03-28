@@ -4,6 +4,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:liveombre/controllers/auth_controller.dart';
 import 'package:liveombre/views/screens/add_video_screen.dart';
+import 'package:liveombre/views/screens/liked_screen.dart';
 import 'package:liveombre/views/screens/profile_screen.dart';
 import 'package:liveombre/views/screens/search_screen.dart';
 import 'package:liveombre/views/screens/video_screen.dart';
@@ -12,7 +13,7 @@ List pages = [
   VideoScreen(),
   SearchScreen(),
   const AddVideoScreen(),
-  const Text('Messages Screen'),
+  const LikedScreen(),
   ProfileScreen(uid: authController.user.uid),
 ];
 

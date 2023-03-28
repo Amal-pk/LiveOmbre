@@ -20,43 +20,27 @@ class SignupScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                'Tiktok Clone',
-                style: TextStyle(
-                  fontSize: 35,
-                  color: buttonColor,
-                  fontWeight: FontWeight.w900,
-                ),
-              ),
               const Text(
                 'Register',
                 style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 35,
                   fontWeight: FontWeight.w700,
                 ),
               ),
               const SizedBox(
                 height: 25,
               ),
-              Stack(
-                children: [
-                  const CircleAvatar(
-                    radius: 64,
-                    backgroundImage: NetworkImage(
-                        'https://www.pngitem.com/pimgs/m/150-1503945_transparent-user-png-default-user-image-png-png.png'),
-                    backgroundColor: Colors.black,
+              InkWell(
+                onTap: () => authController.pickImage(),
+                child: const CircleAvatar(
+                  radius: 64,
+                  backgroundColor: Colors.white30,
+                  child: Icon(
+                    Icons.person_4_rounded,
+                    color: Colors.white,
+                    size: 60,
                   ),
-                  Positioned(
-                    bottom: -10,
-                    left: 80,
-                    child: IconButton(
-                      onPressed: () => authController.pickImage(),
-                      icon: const Icon(
-                        Icons.add_a_photo,
-                      ),
-                    ),
-                  ),
-                ],
+                ),
               ),
               const SizedBox(
                 height: 15,

@@ -6,7 +6,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:liveombre/constants.dart';
 import 'package:liveombre/models/user.dart' as model;
 import 'package:liveombre/views/screens/auth/login_screen.dart';
-import 'package:liveombre/views/screens/home_screen.dart';
+import 'package:liveombre/views/screens/bottomnavigation.dart';
 
 class AuthController extends GetxController {
   static AuthController instance = Get.find();
@@ -62,7 +62,7 @@ class AuthController extends GetxController {
       if (username.isNotEmpty &&
           email.isNotEmpty &&
           password.isNotEmpty &&
-          image != null ) {
+          image != null) {
         // save out user to our ath and firebase firestore
         UserCredential cred = await firebaseAuth.createUserWithEmailAndPassword(
           email: email,
