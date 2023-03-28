@@ -8,7 +8,7 @@ import 'controllers/auth_controller.dart';
 // import 'package:tiktok_tutorial/views/screens/auth/signup_screen.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding();
   await Firebase.initializeApp().then((value) {
     Get.put(AuthController());
   });
