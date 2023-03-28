@@ -1,35 +1,32 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:liveombre/App/Bottom%20Navigation/Controller/bottom_navigation_controller.dart';
-import 'package:liveombre/App/Bottom%20Navigation/View/bottom_navigation.dart';
-import 'package:liveombre/App/Home/Controller/home_controller.dart';
-import 'package:provider/provider.dart';
+import 'package:get/get.dart';
+import 'package:liveombre/constants.dart';
+import 'package:liveombre/views/screens/auth/login_screen.dart';
 
-void main() {
+import 'controllers/auth_controller.dart';
+// import 'package:tiktok_tutorial/views/screens/auth/signup_screen.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp().then((value) {
+    Get.put(AuthController());
+  });
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(
-          create: (context) => BottomNavigationController(),
-        ),
-        ChangeNotifierProvider(
-          create: (context) => HomePageController(),
-        ),
-      ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Live Ombre',
-        theme: ThemeData(
-          primarySwatch: Colors.red,
-        ),
-        home: const BottomNavigationBarScreen(),
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'TikTok Clone',
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: backgroundColor,
       ),
+      home: LoginScreen(),
     );
   }
 }

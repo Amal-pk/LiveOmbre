@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "577030103897",
+    "project_id": "tiktok-clone-ee19e",
+    "storage_bucket": "tiktok-clone-ee19e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577030103897:android:777d990919f76379e3a248",
+        "android_client_info": {
+          "package_name": "com.example.liveombre"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "577030103897-ogu5mmnc4ti2s6aqn3oj6vfirjckhhs3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN2q35UaKQ9ydCt0OXUNszy0QDKVh6srQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "577030103897-ogu5mmnc4ti2s6aqn3oj6vfirjckhhs3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
