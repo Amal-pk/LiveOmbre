@@ -136,24 +136,24 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   horizontal: 15,
                                 ),
                               ),
-                              Column(
-                                children: [
-                                  Text(
-                                    controller.user['likes'],
-                                    style: const TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  const SizedBox(height: 5),
-                                  const Text(
-                                    'Likes',
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                    ),
-                                  ),
-                                ],
-                              ),
+                              // Column(
+                              //   children: [
+                              //     Text(
+                              //       controller.user['likes'],
+                              //       style: const TextStyle(
+                              //         fontSize: 20,
+                              //         fontWeight: FontWeight.bold,
+                              //       ),
+                              //     ),
+                              //     const SizedBox(height: 5),
+                              //     const Text(
+                              //       'Likes',
+                              //       style: TextStyle(
+                              //         fontSize: 14,
+                              //       ),
+                              //     ),
+                              //   ],
+                              // ),
                             ],
                           ),
                           const SizedBox(
